@@ -1,0 +1,26 @@
+<div class="single-movie">
+  <img
+    src="<%=singleMovie.image%>"
+    alt="single movie pic"
+    style="height: 400px"
+  />
+  <h1><%=singleMovie.title%></h1>
+  <div>
+    <h2>Director:</h2>
+    <h3><%= singleMovie.director%></h3>
+  </div>
+  <div>
+    <h2>Stars in the Movie:</h2>
+    <% for( let index = 0; index < singleMovie.stars.length; index++ ) { %>
+    <h5><%=singleMovie.stars[index]%></h5>
+    <% } %>
+  </div>
+  <h2>Description:</h2>
+  <h4><%=singleMovie.description%></h4>
+  <h2>Showtimes:</h2>
+  <div class="showtimes">
+    <% for( let index = 0; index < singleMovie.showtimes.length; index++ ) { %>
+    <h6><%=singleMovie.showtimes[index]%></h6>
+    <% } %>
+  </div>
+</div>

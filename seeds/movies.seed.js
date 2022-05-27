@@ -80,15 +80,15 @@ const movies = [
     showtimes: ["13:00", "15:30", "18:00", "20:10", "22:40"],
   },
 ];
+
 require("../db");
 const MovieModel = require("../Models/Movie.model");
 
 const mongoose = require("mongoose");
 
 MovieModel.insertMany(movies)
-  .then((addedMovies) => {
-    // what happends if the data was added correctly. addedMovies will be the data added.
-    console.log(`${addedMovies.length} movies added to DB`);
+  .then((seededMovies) => {
+    console.log(`${seededMovies.length} movies added to DB`);
     mongoose.connection
       .close()
       .then(() => console.log("Database closed"))

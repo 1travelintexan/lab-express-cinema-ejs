@@ -1,0 +1,11 @@
+<h1>Movies:</h1>
+<div class="movies-div">
+  <% for( let index = 0; index < allMovies.length; index++ ) { %>
+  <a href="/movie/<%=allMovies[index]._id%>">
+    <div class="movie">
+      <img src="<%= allMovies[index].image%>" alt="movie image" />
+      <h3><%=allMovies[index].title%></h3>
+    </div>
+  </a>
+  <% } %>
+</div>
